@@ -10,6 +10,8 @@ jobs:
      - name: checkout repository
        uses: actions/checkout@v2
 
+     - name: Set Execution Policy
+       run: Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
      - name: create a file
        run: |
          New-Item -Path "E:\GIT_practice\actions_file.txt" -ItemType "file" -Force
