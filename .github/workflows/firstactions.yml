@@ -3,7 +3,7 @@ name : demo actions
 on: [push]
 
 jobs:
-        run first actions pipeline:
+        create file actions pipeline
                 runs-on: self-hosted
                 
                 steps:
