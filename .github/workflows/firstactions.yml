@@ -3,19 +3,37 @@ name : demo actions
 on: [push]
 
 jobs:
-        create file actions pipeline
-                runs-on: self-hosted
+  create file actions pipeline:
+    runs-on: self-hosted
                 
-                steps:
-                        - name: checkout repository
-                          uses: actions/checkout@v2
+     steps:
+     - name: checkout repository
+       uses: actions/checkout@v2
 
-                        - name: create a file
-                          run:
-                                  New-Item -Path "E:\GIT_practice\actions_file.txt" -ItemType "file" -Force
-                                  Set-Content -Path "C:\path\to\your\file.txt" -Value "I created a pipeline."
+     - name: create a file
+       run: |
+         New-Item -Path "E:\GIT_practice\actions_file.txt" -ItemType "file" -Force
+         Set-Content -Path "C:\path\to\your\file.txt" -Value "I created a pipeline."
 
-                          shell: pwsh
+       shell: pwsh
+
+
+       #name: Create File Example
+
+#on: [push]
+
+#jobs:
+        #  create-file:
+    runs-on: self-hosted
+    #    steps:
+            #    - name: Checkout repository
+      #      uses: actions/checkout@v2
+
+      #    - name: Create a new file
+      #      run: |
+              #        New-Item -Path "C:\path\to\your\file.txt" -ItemType "file" -Force
+        #        Set-Content -Path "C:\path\to\your\file.txt" -Value "This is the file content."
+        #  shell: pwsh
 
 
 
