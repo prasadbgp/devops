@@ -6,7 +6,7 @@ jobs:
   create-file:
     runs-on: self-hosted
                 
-     steps:
+    steps:
      - name: checkout repository
        uses: actions/checkout@v2
 
@@ -24,7 +24,7 @@ jobs:
 
 #jobs:
         #  create-file:
-    runs-on: self-hosted
+#    runs-on: self-hosted
     #    steps:
             #    - name: Checkout repository
       #      uses: actions/checkout@v2
