@@ -9,13 +9,14 @@ jobs:
     steps:
      - name: checkout repository
        uses: actions/checkout@v2
-
-     - name: Set Execution Policy
-       run: Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
-     - name: create a file
-       run: |
-         New-Item -Path "E:\GIT_practice\actions_file.txt" -ItemType "file" -Force
-         Set-Content -Path "C:\path\to\your\file.txt" -Value "I created a pipeline."
+     - name: Print message 
+       run: Write-Host "Hello from GitHub Actions!"
+     #- name: Set Execution Policy 
+      # run: Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
+    # - name: create a file
+    #   run: |
+    #    New-Item -Path "E:\GIT_practice\actions_file.txt" -ItemType "file" -Force
+    #    Set-Content -Path "C:\path\to\your\file.txt" -Value "I created a pipeline."
 
        shell: powershell
 
