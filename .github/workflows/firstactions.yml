@@ -10,7 +10,7 @@ jobs:
      - name: checkout repository
        uses: actions/checkout@v2
      - name: Print message 
-       run: Write-Host "Hello from GitHub Actions!"
+       run: Write-Host "Hello from GitHub Actions"
      #- name: Set Execution Policy 
       # run: Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
     # - name: create a file
