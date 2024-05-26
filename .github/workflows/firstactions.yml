@@ -15,7 +15,7 @@ jobs:
          New-Item -Path "E:\GIT_practice\actions_file.txt" -ItemType "file" -Force
          Set-Content -Path "C:\path\to\your\file.txt" -Value "I created a pipeline."
 
-       shell: pwsh
+       shell: powershell
 
 
        #name: Create File Example
