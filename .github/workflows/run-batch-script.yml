@@ -1,9 +1,9 @@
 name: Run Batch Script on Self-Hosted Runner
 
 on:
-  push:
-    branches:
-      - main
+#  push:
+#    branches:
+#      - main
   workflow_dispatch:
 
 jobs:
@@ -16,3 +16,8 @@ jobs:
     - name: Run batch script
       run: C:\batch_scripts\'example-script-demo.bat'
       shell: cmd
+    - name: Upload artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: TestDir
+        path: TestDir
