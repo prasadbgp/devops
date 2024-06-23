@@ -14,8 +14,8 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Run batch script
-      run: ${{ secrets.SCRIPT_PATH }}
-     # run: C:\batch_scripts\'example-script-demo.bat'
+     # run: ${{ secrets.SCRIPT_PATH }}
+      run: C:\batch_scripts\'example-script-demo.bat'
       shell: cmd
      # run: C:\batch_scripts\'example-script-demo.bat'
      # shell: cmd
