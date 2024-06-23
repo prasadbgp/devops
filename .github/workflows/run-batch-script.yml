@@ -14,14 +14,8 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Run batch script
-  #  - name: Run batch script
       run: ${{ env.SCRIPT_PATH }}
       shell: cmd
      # run: C:\batch_scripts\'example-script-demo.bat'
      # shell: cmd
-    - name: Upload artifact
-      if: success()  # Only upload artifact if the job is successful
-      uses: actions/upload-artifact@v2
-      with:
-        name: TestDir  # Name of the artifact
-        path: ./TestDir  # Path to the directory to be uploaded
+  
